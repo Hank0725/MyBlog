@@ -5,6 +5,8 @@ import About from '@/views/About.vue'
 import Article from '@/views/Article'
 import Admin from '@/views/Admin'
 import Login from '@/views/Login'
+import Error from '@/views/Error'
+import AdminHome from '@/views/Admin/AdminHome'
 import Add from '@/views/Admin/Add'
 
 Vue.use(VueRouter)
@@ -21,7 +23,7 @@ const routes = [
     component: About
   },
   {
-    path: '/aritle',
+    path: '/aritle/:id',
     name: 'Article',
     component: Article
   },
@@ -31,17 +33,22 @@ const routes = [
     component: Login
   },
   {
+    path: '*',
+    name: 'Error',
+    component: Error
+  },
+  {
     path: '/admin',
     name: 'Admin',
     component: Admin,
     children: [
       {
         path: '/',
-        name: 'Admin-home',
-        component: Admin
+        name: 'AdminHome',
+        component: AdminHome
       },
       {
-        path: '/add',
+        path: 'add',
         name: 'Admin-Add',
         component: Add
       }

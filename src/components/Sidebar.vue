@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <div class="sideBar">
+    側邊頁面顯示
     <article  v-for="(art, index) in articles" :key="index">
       <h3 @click="routerToArticle(art.id)">{{ art.title }}</h3>
       <i>{{ art.date }}</i>
@@ -12,7 +13,7 @@
 import axios from 'axios'
 
 export default {
-  name: 'Home',
+  name: 'Sidebar',
   mounted () {
     const api = 'https://us-central1-expressapi-8c039.cloudfunctions.net/app/article'
     axios.get(api)
@@ -40,8 +41,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home{
-  width: 60%;
+.sideBar{
+  width: 30%;
   article{
     display: flex;
     flex-direction:column;
