@@ -2,7 +2,7 @@
 2021 New Side Project
 
 
-Demo:https://hank0725.github.io/myblog/
+Demo:https://myblog-9ef7a.web.app/#/
 This website is only use for Demo and education.
 
 Build Setup
